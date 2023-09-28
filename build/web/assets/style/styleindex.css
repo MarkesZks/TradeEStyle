@@ -1,9 +1,11 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 27 de set. de 2023, 20:36:06
-    Author     : GABRIEL
-*/
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
 
+/* Sobrescreva as variáveis de cor do Bootstrap conforme necessário */
+:root {
+    --primary: #9400D3;
+}
+
+#imghome{
+    background: aqua;
+
+}
