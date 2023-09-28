@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
@@ -53,19 +53,20 @@
 <header data-bs-theme="dark">
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
-      <a href="../index.html" class="navbar-brand d-flex align-items-center">
+      <a href="#" class="navbar-brand d-flex align-items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
         <strong>Trade&Style</strong>
       </a>
          <ul class="nav nav-pills">
-             <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Roupas</a></li>
-        <li class="nav-item"><a href="CadastroUser.jsp" class="nav-link active" aria-current="page">Cadastro</a></li>
+             <li class="nav-item"><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+             <li class="nav-item"><a href="CadastroRoupas.jsp" class="nav-link">Roupas</a></li>
+             <li class="nav-item"><a href="CadastroUser.jsp" class="nav-link">Cadastro</a></li>
       </ul>     
 
     </div>
   </div>
 </header>
+
     
 <div class="container">
   <main>
@@ -390,7 +391,7 @@
             </div>
 
             <div class="col-md-6">
-              <label for="state" class="form-label"><h6>Telefone</h6></label>
+              <label for="state" class="form-label"><h6>Estados</h6></label>
               <select class="form-select" id="state" required>
               <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
