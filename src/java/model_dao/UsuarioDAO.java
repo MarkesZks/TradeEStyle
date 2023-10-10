@@ -23,7 +23,7 @@ public class UsuarioDAO {
             Statement stmt = conexao.createStatement();
             
                     
-            String sql = "INSERT into usuario(id, nome, sobrenome, username, email, telefone, endereco, pais, estado) " + 
+            String sql = "INSERT into usuario(id, nome, senha, username, email, telefone, endereco, pais, estado) " + 
                     "values('" + usuario.getId() + "','" + usuario.getNome() + "','" + usuario.getSenha() +
                     "', '" + usuario.getUsername() + "','" + usuario.getEmail()+ "','"+ usuario.getTelefone() + 
                     "','" + usuario.getEndereco() + "','" + usuario.getPais() + "','" + usuario.getEstado() + "')";

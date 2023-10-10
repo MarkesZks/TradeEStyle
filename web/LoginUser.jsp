@@ -1,53 +1,74 @@
 <%-- 
     Document   : actionUser
     Created on : 2 de out. de 2023, 16:43:56
-    Author     : GABRIEL
+    Author     : 
+Felipe Matthew Moreira Nascimento 11221103739
+Felipe Rocha Dias 11221104556
+Gabriel Marques Messias 11221102170
+Gustavo Neves De Paiva 11221103490
+Mateus De Barros Gimenes 11221103419
 --%>
+<!-- Importar Bibliotecas Java e Controles do usuario -->
 <%@page import="java.text.*" import="java.lang.*" %>
 <%@page import="model.Usuario"%>
-<%@page import="controller.ControllerUser"%>
+<%@page import="controller.ControllerUser" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+ 
         
-         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Trade&Style</title>
+        <link rel="icon" type="image/png" href="./assets/images/icon.png">
         <link rel="stylesheet" href="./assets/style/custom.css" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoI6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
         
-        
-        
+        <style>
+            a {
+                  text-decoration: none; /* Remove sublinhado */
+                   color: inherit;
+            }
+        </style>
     </head>
     <body>
         
-       <header data-bs-theme="dark">
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center justify-content-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Trade&Style</strong>
-      </a>
-    </div>
-  </div>
-</header>
-        
-
-          <%
-
-         String email = request.getParameter("email");
-         String senha = request.getParameter("senha");
-     
-    ControllerUser controllerUser = new ControllerUser();
-    
-            if (controllerUser.logar(email, senha)){
-                out.println("Acesso Permitido");
-    
-            }else{
-                out.println("Acesso NEGADO!!!");
+         <!-- Configuração de Alerta caso o usuario for logado com sucesso-->
+        <script>
+            function mostrarAlertaSucesso(mensagem) {
+                Swal.fire({
+                    icon: 'success',
+                    confirmButtonText: '<a href="./home.jsp">Ok</a>',
+                    title: 'Sucesso',
+                    text: mensagem,
+                });
             }
+        </script> 
         
-     %>
-
+                <!-- Try catch instanciando a classe controller-->
+        <%
+            try {
+                String email = request.getParameter("email");
+                String senha = request.getParameter("senha");
+        
+                ControllerUser controllerUser = new ControllerUser();
+                if (controllerUser.logar(email,senha)) {
+        %>
+        <!-- Executando Script de Alerta e redirencionado para Home-->
+        <script>mostrarAlertaSucesso('Login realizado com sucesso!');</script>
+        <%
+                } else {
+        %>
+        <!-- Caso de Erro direcionar para pagina de erro-->
+        <script> window.location.href = './pages/Error/404Error.html';</script>
+        <%
+                }
+            } catch(Error ex) {
+                out.println(ex);
+            }
+        %>
     </body>
 </html>
