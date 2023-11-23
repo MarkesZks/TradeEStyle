@@ -17,6 +17,7 @@ Mateus De Barros Gimenes 11221103419
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Trade&Style - Roupa</title>
         <link rel="icon" type="image/png" href="../../assets/images/icon.png">
         <link rel="stylesheet" href="./assets/style/custom.css" />
@@ -26,7 +27,7 @@ Mateus De Barros Gimenes 11221103419
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </head>
     <body>
-         <!-- Cabeçalho de navegação entre telas -->
+        <!-- Cabeçalho de navegação entre telas -->
         <header data-bs-theme="dark">
             <div class="navbar navbar-dark bg-dark shadow-sm">
                 <div class="container">
@@ -35,17 +36,17 @@ Mateus De Barros Gimenes 11221103419
                         <strong>Trade&Style</strong>
                     </a>
                     <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="../../home.jsp" class="nav-link" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="./ApagarRoupa/ApagarRoupa.jsp" class="nav-link active">Visualizar roupa</a></li>
+                        <li class="nav-item"><a href="../../home.jsp" class="btn btn-outline-success" aria-current="page" style="margin-right: 20px">Home</a></li>
+                        <li class="nav-item"><a href="./ApagarRoupa/ApagarRoupa.jsp" class="btn btn-success">Visualizar</a></li>
                     </ul>     
 
                 </div>
             </div>
         </header>
-                 <!-- Tela para visualizar Roupa expecifica -->
-          <main class="mt-5 flex-fill">
+        <!-- Tela para visualizar Roupa expecifica -->
+        <main class="mt-5 flex-fill">
             <div class="container">
-                        <!-- Apontando para o Id-->
+                <!-- Apontando para o Id-->
                 <%
                     String id = request.getParameter("idRoupa");
 
@@ -57,25 +58,131 @@ Mateus De Barros Gimenes 11221103419
                     if (roupaDAO.consultarId(roupa) != null) {
                 %>
                 <div class="row g-3">
-                        <!-- Preenchendo as imagens da Roupa informada-->
-                
+                    <!-- Preenchendo as imagens da Roupa informada-->
+
                     <div class="col-12 col-sm-6">
-                        <img src="../../assets/images/image 18.png" class="img-thumbnail" id="imgProduto">
+                        <%
+                            // Pegar tipo de roupa e trocar imagem da section
+                            // Camiseta e Camisa
+                            if ("camiseta".equals(roupa.getTipo()) || "camisa".equals(roupa.getTipo())) {
+                        %>
+                        <img class="bd-placeholder-img card-img-top" src="../../assets/images/imageteste.png" style="padding: 10px; width: 100%;height:75%; align-content: center">
                         <br class="clearfix">
                         <div class="row my-3 gx-3">
                             <div class="col-3">
-                                <img src="../../assets/images/image 18.png" class="img-thumbnail" onclick="trocarImagem(this)">
+                                <img src="../../assets/images/imageteste.png" class="img-thumbnail">
                             </div>
                             <div class="col-3">
-                                <img src="../../assets/images/image 18.png" class="img-thumbnail" onclick="trocarImagem(this)">
+                                <img src="../../assets/images/imageteste.png" class="img-thumbnail">
                             </div>
                             <div class="col-3">
-                                <img src="../../assets/images/image 18.png" class="img-thumbnail" onclick="trocarImagem(this)">
+                                <img src="../../assets/images/imageteste.png" class="img-thumbnail">
                             </div>
                             <div class="col-3">
-                                <img src="../../assets/images/image 18.png" class="img-thumbnail" onclick="trocarImagem(this)">
+                                <img src="../../assets/images/imageteste.png" class="img-thumbnail">
                             </div>
                         </div>
+                        <%
+                            // Calça
+                        } else if ("calca".equals(roupa.getTipo())) {
+                        %>
+                        <img class="bd-placeholder-img card-img-top" src="../../assets/images/calçaImagem.png" style="padding: 10px; width: 100%;height:75%; align-content: center">  
+                        <br class="clearfix">
+                        <div class="row my-3 gx-3">
+                            <div class="col-3">
+                                <img src="../../assets/images/calçaImagem.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/calçaImagem.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/calçaImagem.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/calçaImagem.png" class="img-thumbnail">
+                            </div>
+                        </div>
+                        <%
+                            //Shorts
+                        } else if ("shorts".equals(roupa.getTipo())) {
+                        %>
+                        <img class="bd-placeholder-img card-img-top" src="../../assets/images/shorts.png" style="padding: 50px; width: 100%;height:75%; align-content: center">
+                        <br class="clearfix">
+                        <div class="row my-3 gx-3">
+                            <div class="col-3">
+                                <img src="../../assets/images/shorts.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/shorts.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/shorts.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/shorts.png" class="img-thumbnail">
+                            </div>
+                        </div>
+                        <%
+                            // Sapato e Tenis
+                        } else if ("sapato".equals(roupa.getTipo()) || "tenis".equals(roupa.getTipo())) {
+                        %> 
+                        <img class="bd-placeholder-img card-img-top" src="../../assets/images/sapato.png" style="padding: 50px; width: 100%;height:75%; align-content: center">
+                        <br class="clearfix">
+                        <div class="row my-3 gx-3">
+                            <div class="col-3">
+                                <img src="../../assets/images/sapato.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/sapato.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/sapato.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/sapato.png" class="img-thumbnail">
+                            </div>
+                        </div>
+                        <%
+                        } else if ("blusa".equals(roupa.getTipo())) {
+                        %>
+                        <img class="bd-placeholder-img card-img-top" src="../../assets/images/jaqueta.png" style="padding: 50px; width: 100%;height:75%; align-content: center">
+                        <br class="clearfix">
+                        <div class="row my-3 gx-3">
+                            <div class="col-3">
+                                <img src="../../assets/images/jaqueta.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/jaqueta.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/jaqueta.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/jaqueta.png" class="img-thumbnail">
+                            </div>
+                        </div>
+                        <%
+                        } else {
+                        %>
+                        <img class="bd-placeholder-img card-img-top" src="../../assets/images/imageteste.png" style="padding: 50px; width: 100%;height:75%; align-content: center">
+                        <br class="clearfix">
+                        <div class="row my-3 gx-3">
+                            <div class="col-3">
+                                <img src="../../assets/images/imageteste.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/imageteste.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/imageteste.png" class="img-thumbnail">
+                            </div>
+                            <div class="col-3">
+                                <img src="../../assets/images/imageteste.png" class="img-thumbnail">
+                            </div>
+                        </div>
+                        <%
+                            }
+                        %>
                     </div>
                     <div class="col-12 col-sm-6">
                         <!-- Preenchendo as informaçoes da roupa-->
@@ -90,24 +197,24 @@ Mateus De Barros Gimenes 11221103419
                         <p>
                             <!-- Alterar o cadastro da Roupa-->
                             <button 
-                                class="btn btn-lg btn-success mb-3 mb-xl-0 me-2" 
-                                onclick="document.location = '../AlterarRoupa/AlterarRoupa.jsp?idRoupa=<%= roupa.getId() %>'"
-                            >
+                                class="btn btn-lg btn-outline-success mb-3 mb-xl-0 me-2" 
+                                onclick="document.location = '../AlterarRoupa/AlterarRoupa.jsp?idRoupa=<%= roupa.getId()%>'"
+                                >
                                 <i class="bi-cart"></i> Atualizar Dados
                             </button>
                             <!-- Apagar a Roupa informada-->
                             <button 
 
-                                class="btn btn-lg btn-outline-danger"
-                                onclick="document.location = '../ApagarRoupa/ActionApagarRoupa.jsp?idRoupa=<%= roupa.getId() %>'"
-                            >
+                                class="btn btn-lg btn-outline-danger mb-3"
+                                onclick="document.location = '../ApagarRoupa/ActionApagarRoupa.jsp?idRoupa=<%= roupa.getId()%>'"
+                                >
                                 <i class="bi-heart"></i> Apagar Roupa
                             </button>
                         </p>
                     </div>
                 </div>
                 <%
-                    }else{
+                    } else {
                         out.println("<br> <b>Roupa não encontrada! <b>");
                     };
                 %>

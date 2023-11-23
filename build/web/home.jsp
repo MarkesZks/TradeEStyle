@@ -23,9 +23,11 @@ Mateus De Barros Gimenes 11221103419
     <head>
         <title>Trade&Style - Página Inicial</title>
         <link rel="icon" type="image/png" href="./assets/images/icon.png">
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/style/custom.css" />
+        <link rel="stylesheet" href="./assets/style/styleindex.css" />
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..200"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-5SJYT5s68Pfo99fWccUpMSLOHlCZSTdrWyx82JueLqB+YRBEC8pZgnVvSdvtWWnb/h6rJ4CjB0hL5K6bfiwuTQ==" crossorigin="anonymous" />
@@ -85,24 +87,29 @@ Mateus De Barros Gimenes 11221103419
         </style>
     </head>
     <body>    
+        <style>
+            .container {
+                text-align: center;
+            }
+            
+        </style>
          <!-- Cabeçalho de navegação entre telas -->
         <header data-bs-theme="dark">
             <div class="navbar navbar-dark bg-dark shadow-sm">
-                <div class="container">
-                    <a href="./home.jsp" class="navbar-brand d-flex align-items-center">
-                        <img src="./assets/images/icon-page.png" width="25" height="25" style="margin-right: 3px" alt="cabide" />
-                        <strong>Trade&Style</strong>
-                    </a>
+                <div class="container justify-content-md-center ">
+                        <a href="home.jsp" class="navbar-brand d-flex align-items-center text-center centro">
+                            <img src="./assets/images/icon-page.png" width="60" height="60" style="margin-right: 3px" alt="cabide" />
+                            <strong class="h1">Trade&Style</strong>
+                        </a>
                     <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="./home.jsp" class="nav-link active" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="./pages/CadastrarRoupa/CadastroRoupas.jsp" class="nav-link">Cadastrar Roupas</a></li>               
-                        <li class="nav-item"><a href="./pages/AlterarRoupa/AlterarRoupaBusca.jsp" class="nav-link">Alterar Roupa</a></li>
-                        <li class="nav-item"><a href="./pages/ApagarRoupa/ApagarRoupa.jsp" class="nav-link">Apagar Roupa</a></li>
-                        <li class="nav-item"><a href="index.html" class="nav-link">Login</a></li>
+                        <li class="nav-item"><a href="./home.jsp" class="btn btn-success m-1" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="./pages/CadastrarRoupa/CadastroRoupas.jsp" class="btn btn-outline-success m-1">Cadastrar</a></li>               
+                        <li class="nav-item"><a href="./pages/AlterarRoupa/AlterarRoupaBusca.jsp" class="btn btn-outline-success m-1">Alterar</a></li>
+                        <li class="nav-item"><a href="./pages/ApagarRoupa/ApagarRoupa.jsp" class="btn btn-outline-success m-1">Apagar</a></li>
                         
                     </ul>     
-
                 </div>
+
             </div>
         </header>
 
@@ -117,9 +124,9 @@ Mateus De Barros Gimenes 11221103419
                 background-repeat: no-repeat;
                 background-position: center ; "
                 >
-                <div class="row py-lg-5">
+                <div class="row py-lg-5 bg-success" style="opacity: 80%">
                     <div class="col-lg-6 col-md-8 mx-auto">
-                        <h1 class="fw-light" style="color:white"> <strong>A melhor loja de Roupas usadas </strong> </h1>
+                        <h1 class="fw-light" style="font-weight: 900;color:white; opacity: 100%;"> <strong>A melhor loja de Roupas usadas </strong> </h1>
                         <p class="lead " style="color:white" > <i>Loja de roupas e produtos usados, promovendo a sustentabilidade e o consumo consciente</i></p>
                     </div>
                 </div>
@@ -198,12 +205,12 @@ Mateus De Barros Gimenes 11221103419
                 <div class="btn-group">
                      <!-- Botões para Visualizar/Apagar/Alterar Por ID referente a roupa selecionada -->
                   
-                                            <button onclick="document.location = './pages/ConsultarRoupa/VisualizarRoupa.jsp?idRoupa=<%= myList.get(i).getId() %>'" type="button" class="btn btn-sm btn-outline-secondary">Visualizar</button>
-                                            <button  onclick="document.location = 'pages/ApagarRoupa/ActionApagarRoupa.jsp?idRoupa=<%= myList.get(i).getId()%>'" type="button" class="btn btn-sm btn-outline-secondary">Apagar</button>
+                                            <button onclick="document.location = './pages/ConsultarRoupa/VisualizarRoupa.jsp?idRoupa=<%= myList.get(i).getId() %>'" type="button" class="btn btn-sm btn-outline-success">Visualizar</button>
+                                            <button  onclick="document.location = 'pages/ApagarRoupa/ActionApagarRoupa.jsp?idRoupa=<%= myList.get(i).getId()%>'" type="button" class="btn btn-sm btn-outline-success">Apagar</button>
                              
-                                            <button  onclick="document.location ='pages/AlterarRoupa/AlterarRoupa.jsp?idRoupa=<%= myList.get(i).getId()%>'" type="button" class="btn btn-sm btn-outline-secondary">Atualizar</button>
+                                            <button  onclick="document.location ='pages/AlterarRoupa/AlterarRoupa.jsp?idRoupa=<%= myList.get(i).getId()%>'" type="button" class="btn btn-sm btn-outline-success">Atualizar</button>
                 </div>
-                                            <small class="text-body-secondary">Valor:  <span class="fw-bold">R$ <%= myList.get(i).getValor()%></span></small>
+                <small class="text-body-secondary">Valor:  <span class="fw-bold">R$ <%= myList.get(i).getValor()%></span></small>
               </div>
             </div>
           </div>
@@ -229,13 +236,13 @@ Mateus De Barros Gimenes 11221103419
         </main>
         
         
-        <button class="float-end mb-1" href="#" id="btnScrollToTop" title="Voltar ao Topo"><i class="fa-solid fa-arrow-up"><a href="#"></a></i></button>
+        <button class="btn btn-success" style="padding: 0; border-radius: 100px;" id="btnScrollToTop" type="button" title="Voltar ao Topo"><a class="btn btn-success" style="border-radius: 100px;" href="#"><img width="20px" height="30px" src="assets/images/expand_less_FILL0_wght400_GRAD0_opsz24.svg" alt="alt"/></a></button>
         
          <!-- Rodapé da Pagina -->
-        <footer class="text-body-secondary py-5">
-            <div class="container">
-                <p class="float-end mb-1">
-                    <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+         <footer class="text-body-secondary py-5 bg-dark" >
+            <div class="container text-light">
+                <p class="float-end mb-1" >
+                    <a href="#"  ><i class="fa-solid fa-arrow-up"></i></a>
                 </p>
                 <p class="mb-1">Projeto criado para fins acadêmicos criado pelos alunos: <br> Felipe Matthew - Felipe Rocha - Gabriel Marques - Gustavo Neves - Mateus Gimenes</p>
                 <p class="mb-0">Projeto url: <a target="_blank" href="https://github.com/MarkesZks/TradeEStyle">https://github.com/MarkesZks/TradeEStyle</a></p>

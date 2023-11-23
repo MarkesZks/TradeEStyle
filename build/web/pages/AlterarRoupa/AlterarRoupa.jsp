@@ -17,6 +17,7 @@ Mateus De Barros Gimenes 11221103419
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Trade&Style - Alterar Roupa</title>
         <link rel="icon" type="image/png" href="../../assets/images/icon.png">
@@ -35,8 +36,8 @@ Mateus De Barros Gimenes 11221103419
                         <strong>Trade&Style</strong>
                     </a>
                     <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="../../home.jsp" class="nav-link " aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="./pages/AlterarRoupa/AlterarRoupaBusca.jsp" class="nav-link active">Alterar Roupa</a></li>
+                        <li class="nav-item"><a href="../../home.jsp" class="btn btn-outline-success" aria-current="page" style="margin-right: 20px">Home</a></li>
+                        <li class="nav-item"><a href="./pages/AlterarRoupa/AlterarRoupaBusca.jsp" class="btn btn-success">Alterar</a></li>
 
                     </ul>     
 
@@ -95,7 +96,7 @@ Mateus De Barros Gimenes 11221103419
                         </div>
                         <!-- Tipo de Roupa  -->
                         <div class="row g-3">
-                            <div class="col-3">
+                            <div class="col-sm-3">
                                 <label for="tipoRoupa" class="form-label"><h6>Tipo de roupa: </h6></label>
                                 <input name="tipoRoupa" type="text" class="form-control" value="<%= roupa.getTipo()%>" required/>
                                 <div class="invalid-feedback">
@@ -103,7 +104,7 @@ Mateus De Barros Gimenes 11221103419
                                 </div>
                             </div>
                         <!-- Tamanho da roupa -->
-                            <div class="col-3">
+                            <div class="col-sm-3">
                                 <label for="tamanho" class="form-label"><h6>Tamanho: </h6></label>
                                 <input name="tamanho" type="text" class="form-control" value="<%= roupa.getTamanho()%>" required/>
                                 <div class="invalid-feedback">
@@ -111,12 +112,12 @@ Mateus De Barros Gimenes 11221103419
                                 </div>
                             </div>
                         <!-- Cor da Roupa  -->
-                            <div class="col-3">
+                            <div class="col-sm-3">
                                 <label for="cor" class="form-label"><h6>Cor: </h6></label>
                                 <input name="cor" type="text" class="form-control" value="<%= roupa.getCor()%>"/>
                             </div>
                         <!-- Valor da Roupa  -->
-                            <div class="col-md-3">
+                            <div class="col-sm-3">
                                 <label for="valor" class="form-label"><h6>Valor: </h6></label>
                                 <input name="valor" type="number" class="form-control" id="valor" value="<%= roupa.getValor()%>"/>
                                 <div class="invalid-feedback">
@@ -128,7 +129,7 @@ Mateus De Barros Gimenes 11221103419
                     <hr class="my-4"/>
                     <div class="row justify-content-center align-items-center">
                         <br/>
-                        <button  onclick="document.location = './ActionAlterarRoupa.jsp'" class="w-25 btn btn-primary btn-lg" type="submit" value="Alterar">Alterar</button>
+                        <button  onclick="document.location = './ActionAlterarRoupa.jsp'" class="w-25 btn btn-success btn-lg" type="submit" value="Alterar">Alterar</button>
                     </div>
                 </form>
 

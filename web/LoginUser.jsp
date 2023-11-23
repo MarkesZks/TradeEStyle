@@ -43,7 +43,7 @@ Mateus De Barros Gimenes 11221103419
                     icon: 'success',
                     confirmButtonText: '<a href="./home.jsp">Ok</a>',
                     title: 'Sucesso',
-                    text: mensagem,
+                    text: mensagem
                 });
             }
         </script> 

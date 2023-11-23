@@ -12,6 +12,7 @@ Mateus De Barros Gimenes 11221103419
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Trade&Style - Alterar Roupa</title>
         <link rel="icon" type="image/png" href="../../assets/images/icon.png">
@@ -30,8 +31,8 @@ Mateus De Barros Gimenes 11221103419
                     <strong>Trade&Style</strong>
                 </a>
                 <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="../../home.jsp" class="nav-link " aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="./AlterarRoupa/AlterarRoupaBusca.jsp" class="nav-link active">Alterar Roupa</a></li>
+                    <li class="nav-item"><a href="../../home.jsp" class="btn btn-outline-success" aria-current="page" style="margin-right: 20px">Home</a></li>
+                    <li class="nav-item"><a href="./AlterarRoupa/AlterarRoupaBusca.jsp" class="btn btn-success ">Alterar</a></li>
 
                 </ul>     
 
@@ -62,7 +63,7 @@ Mateus De Barros Gimenes 11221103419
                     <hr class="my-4"/>
                     <div class="row justify-content-center align-items-center">
                         <a href=""></a>
-                        <button onclick="document.location = 'AlterarRoupa.jsp'"  class="w-25 btn btn-primary btn-lg " type="submit" value="Salvar">Buscar roupa</button>
+                        <button onclick="document.location = 'AlterarRoupa.jsp'"  class="w-25 btn btn-success  btn-lg " type="submit" value="Salvar">Buscar</button>
                     </div>
                 </form>
             </div>

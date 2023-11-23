@@ -15,9 +15,11 @@ Mateus De Barros Gimenes 11221103419
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Trade&Style - Cadastro Usuário</title>
         <link rel="icon" type="image/png" href="../../assets/images/icon.png">
+ 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -34,8 +36,8 @@ Mateus De Barros Gimenes 11221103419
                     </a>
                     <ul class="nav nav-pills">
 
-                        <li class="nav-item"><a href="../../index.html" class="nav-link">Login</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link active">Cadastro</a></li>
+                        <li class="nav-item"><a href="../../index.html" class="btn btn-outline-success " style="margin-right: 20px ">Login</a></li>
+                        <li class="nav-item"><a href="#" class="btn btn-success">Cadastro</a></li>
                     </ul>     
 
                 </div>
@@ -50,7 +52,7 @@ Mateus De Barros Gimenes 11221103419
                 </div>
 
                 <div class="row justify-content-center align-items-center">
-                    <h4 class="mb-3">Preencha suas credenciais</h4>
+                    <h4 class="mb-3 text-center">Preencha suas credenciais</h4>
                     <!-- Form onde os campos serão preenchidos -->
                     <form name="FormUser" method="post" action="actionUser.jsp" class="needs-validation">
                         <!-- Nome do Usuario -->
@@ -72,7 +74,7 @@ Mateus De Barros Gimenes 11221103419
                             </div>
                         <!-- Username do Usuario -->
 
-                            <div class="col-6">
+                            <div class="col-sm-6">
                                 <label for="username" class="form-label"><h6>Username</h6></label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text">@</span>
@@ -83,7 +85,7 @@ Mateus De Barros Gimenes 11221103419
                                 </div>
                             </div>
                         <!-- Email do Usuario -->
-                            <div class="col-6">
+                            <div class="col-sm-6">
                                 <label for="email" class="form-label"><h6>E-mail <span class="text-body-secondary"> (Opicional)</span></h6> </label>
                                 <input name="email" type="email" class="form-control" id="email" placeholder="teste@teste.com">
                                 <div class="invalid-feedback">
@@ -91,7 +93,7 @@ Mateus De Barros Gimenes 11221103419
                                 </div>
                             </div>
                         <!-- Telefone do Usuario -->
-                            <div class="col-6">
+                            <div class="col-sm-6">
                                 <label for="telefone" class="form-label"><h6>Telefone</h6> </label>
                                 <input name="telefone" type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" required>
                                 <div class="invalid-feedback">
@@ -99,12 +101,12 @@ Mateus De Barros Gimenes 11221103419
                                 </div>
                             </div>
                         <!-- Endereço do Usuario -->
-                            <div class="col-6">
+                            <div class="col-sm-6">
                                 <label for="endereco" class="form-label"><h6>Endereço <span class="text-body-secondary"> (Opicional)</span></h6></span></label>
                                 <input name="endereco" type="text" class="form-control" id="endereco" placeholder="Rua Aurora">
                             </div>
                         <!-- Lista de Paises -->
-                            <div class="col-md-6">
+                            <div class="col-sm-6">
                                 <label for="pais" class="form-label"><h6>País</h6></label>
                                 <select name="pais" class="form-select" id="pais" required>
                                     <option value="Brasil" selected="selected">Brasil</option>
@@ -408,7 +410,7 @@ Mateus De Barros Gimenes 11221103419
                         <hr class="my-4">
                         <div class="row justify-content-center align-items-center">
                             <!-- Button para ação do cadastro-->
-                            <button class="w-50 btn btn-primary btn-lg " type="submit" value="Salvar">Cadastrar usuário</button>
+                            <button class="w-50 btn btn-success btn-lg mb-5 " type="submit" value="Salvar">Cadastrar </button>
                         </div> 
                     </form>
                 </div>

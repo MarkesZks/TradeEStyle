@@ -15,6 +15,7 @@ Mateus De Barros Gimenes 11221103419
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Trade&Style - Apagar Roupa</title>
         <link rel="icon" type="image/png" href="../../assets/images/icon.png">
@@ -43,7 +44,7 @@ Mateus De Barros Gimenes 11221103419
                     icon: 'success',
                     confirmButtonText: '<a href="../../home.jsp">Ok</a>',
                     title: 'Sucesso',
-                    text: mensagem,
+                    text: mensagem
                 });
             }
             //   Configuração de Alerta caso for apagado com falha
@@ -55,28 +56,6 @@ Mateus De Barros Gimenes 11221103419
                 });
             }
         </script>
-        
-         <!-- Cabeçalho de navegação entre telas -->
-        <header data-bs-theme="dark">
-            <div class="navbar navbar-dark bg-dark shadow-sm">
-                <div class="container">
-                    <a href="../../home.jsp" class="navbar-brand d-flex align-items-center">
-                        <img src="../../assets/images/icon-page.png" width="25" height="25" style="margin-right: 3px" alt="cabide" />
-                        <strong>Trade&Style</strong>
-                    </a>
-                    <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="../../home.jsp" class="nav-link active" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="./pages/CadastrarRoupa/CadastroRoupas.jsp" class="nav-link">Roupas</a></li>
-                        <li class="nav-item"><a href="../../index.html" class="nav-link">Login</a></li>
-                        <li class="nav-item"><a href="./pages/AlterarRoupa/AlterarRoupaBusca.jsp" class="nav-link">Alterar Roupa</a></li>
-                        <li class="nav-item"><a href="./ApagarRoupa/ApagarRoupa.jsp" class="nav-link">Apagar Roupa</a></li>
-                    </ul>     
-
-                </div>
-            </div>
-        </header>
-        <main>
-        </main>
         <%
             
            //Apagar apontando no ID especificado 

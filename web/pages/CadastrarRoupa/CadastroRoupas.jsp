@@ -13,6 +13,7 @@ Mateus De Barros Gimenes 11221103419
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Trade&Style - Cadastro de Roupa</title>
         <link rel="icon" type="image/png" href="../../assets/images/icon.png">
@@ -31,13 +32,12 @@ Mateus De Barros Gimenes 11221103419
                         <strong>Trade&Style</strong>
                     </a>
                     <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="../../home.jsp" class="nav-link " aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link active">Cadastrar Roupas</a></li>
+                        <li class="nav-item"><a href="../../home.jsp" class="btn btn-outline-success" aria-current="page" style="margin-right: 20px">Home</a></li>
+                        <li class="nav-item"><a href="#" class="btn btn-success">Cadastrar</a></li>
                     </ul>     
-
                 </div>
             </div>
-        </header> 
+        </header>
         <div class="container">
              <!-- Tela de cadastro das Roupas-->
             <main>
@@ -70,7 +70,7 @@ Mateus De Barros Gimenes 11221103419
 
 
                              <!-- Tipos de roupas-->
-                            <div class="col-3">
+                            <div class="col-sm-3">
                                 <label for="tipo" class="form-label"><h6>Tipo de roupa</h6> </label>
                                 <select name="tipoRoupa" class="form-select" required>
                                     <option value="" selected="selected">Selecione...</option>
@@ -87,7 +87,7 @@ Mateus De Barros Gimenes 11221103419
                                 </div>
                             </div>
                             <!-- Tamanho da Roupa-->
-                            <div class="col-3">
+                            <div class="col-sm-3">
                                 <label for="" class="form-label"><h6>Tamanho</h6> </label>
                                 <input name="tamanho" type="text" class="form-control" placeholder="XXL" required>
                                 <div class="invalid-feedback">
@@ -95,12 +95,12 @@ Mateus De Barros Gimenes 11221103419
                                 </div>
                             </div>
                             <!-- Cor da Roupa-->
-                            <div class="col-3">
+                            <div class="col-sm-3">
                                 <label class="form-label"><h6>Cor</h6></span></label>
                                 <input name="cor" type="text" class="form-control" placeholder="Azul Marinho">
                             </div>
                             <!-- Valor da Roupa-->
-                            <div class="col-md-3">
+                            <div class="col-sm-3">
                                 <label class="form-label"><h6>Valor</h6></label>
                                 <input name="valor" type="number" class="form-control" id="address" placeholder="400,00">
                                 <div class="invalid-feedback">
@@ -112,7 +112,7 @@ Mateus De Barros Gimenes 11221103419
                         <div class="row justify-content-center align-items-center">
                             <a href=""></a>
                                <!-- Button para ação do cadastro-->
-                            <button onclick="document.location = 'ActionCadRoupas.jsp'"  class="w-25 btn btn-primary btn-lg " type="submit" value="Salvar">Anunciar roupa!</button>
+                            <button onclick="document.location = 'ActionCadRoupas.jsp'" style="width: 25%; font-size: 1em" class="btn btn-success btn-lg " type="submit" value="Salvar">Anunciar</button>
                         </div>
                     </form>
                 </div>
