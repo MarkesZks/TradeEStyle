@@ -2,16 +2,20 @@
 # Trade&Style
 <img src="https://media.discordapp.net/attachments/460955986581127199/1163484546310864906/image.png?ex=653fbe6c&is=652d496c&hm=57e324c8c59a51ed277b56a16009cffb26f869384cf585095b73fe6786be98e0&=" alt="Logo">
 
-Desenvolver um website que permite os usuários a criar, ler, atualizar e excluir anúncios de roupa e produtos usados promovendo a sustentabilidade e consumo consciente.
+#Visão geral
+Em busca de melhorar e deixar mais sustentável a venda de roupas, decidimos criar a Trade & Style. Um sistema Web Mobile com o objetivo de ser um Wecommer inovador e tecnológico.
+Nosso propósito é fornecer ideias valiosas para o setor, impulsionando a inovação e a criação de soluções que unam tecnologia e responsabilidade socioambiental
 
 
 ## Feito Com:
 [![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/pt-br/windows/get-windows-10)
-![NetBeans IDE](https://img.shields.io/badge/NetBeansIDE-1B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white)
+![NetBeans](https://img.shields.io/badge/NetBeansIDE-1B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![GIT](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
 
 ## 🤝 Colaboradores
 
