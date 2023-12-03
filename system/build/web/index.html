@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--  
+Ativ. 2 - M1 (Troca Estilo)
+Feito por:
+Felipe Matthew Moreira Nascimento 11221103739
+Felipe Rocha Dias 11221104556
+Gabriel Marques Messias 11221102170
+Gustavo Neves De Paiva 11221103490
+Mateus De Barros Gimenes 11221103419
+
+-->
+
+ <!-- Tela de login do usuario -->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Trade&Style</title>
+        <link rel="icon" type="image/png" href="./assets/images/icon.png">
+         <link rel="stylesheet" href="./assets/style/styleindex.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+        
+    </head>
+    <body>
+        
+         <!-- Cabeçalho -->
+          <header data-bs-theme="dark" >
+            <div class="navbar navbar-dark py-4 bg-dark shadow-lg">
+                <div class="container justify-content-md-center ">
+                    <a href="home.jsp" class="navbar-brand d-flex align-items-center text-center centro">
+                        <img src="./assets/images/icon-page.png" width="60" height="60" style="margin-right: 3px;" alt="cabide" />
+                        <strong class="h1">Trade&Style</strong>
+                    </a>
+                </div>
+            </div>
+        </header>
+    <!-- Seção login -->
+        <section class="text-center text-lg-start">
+            <div class="container py-4">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card cascading-right" style="
+                                background: hsla(0, 0%, 100%, 0.55);
+                                backdrop-filter: blur(30px); ">
+                            <div class="card-body p-5 shadow-5 text-center">
+                                <h2 class="fw-bold ">Faça Login</h2>
+                                <p class="mb-5">Venha fazer parte desse grande projeto!</p>
+                                <form name="frmLogin" method="post" action="LoginUser.jsp">
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-3">
+                                        <label class="form-label" for="floatingInput"> E-mail </label>
+                                        <input name="email" id="floatingInput" type="email" class="form-control" />
+                                    </div>
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="floatingPassword">Senha</label>
+                                        <input name="senha" type="password" id="floatingPassword" class="form-control" />
+                                    </div>
+                                    <!-- Checkbox -->
+                                    <div class="form-check d-flex justify-content-center mb-4">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                        <label class="form-check-label btn-success" for="form2Example33">
+                                            Manter-me conectado
+                                        </label>
+                                    </div>
+                                    <!-- Submit button -->
+                                    <button type="submit" class="btn btn-success btn-block mb-4">Acessar</button>
+                                    <!-- Register buttons -->
+                                    <div class="text-center">
+                                        <p>Não tem conta? Cadastre a sua agora</p>
+                                        <a onclick="document.location='./pages/CadastrarUsuario/CadastroUser.jsp'" style='color:green; text-decoration: underline; cursor: pointer'>Cadastrar-se</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Imagem para estilo -->
+                    <div class="col-lg-6 mb-5 mb-lg-0 imglogin">
+                        <img id="imglogin" src="assets/images/login-bg.jpg" class="w-90  rounded-4 shadow-4" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

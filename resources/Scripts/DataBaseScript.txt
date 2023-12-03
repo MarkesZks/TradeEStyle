@@ -1,0 +1,59 @@
+-- criação do database
+CREATE DATABASE loja;
+
+-- criando tabela usuario
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    sobrenome VARCHAR(100),
+    username VARCHAR(100),
+    email VARCHAR(100),
+    telefone VARCHAR(20),
+    endereco VARCHAR(100),
+    pais VARCHAR(100),
+    estado VARCHAR(100)
+);
+
+-- criando tabela roupa
+CREATE TABLE  roupa(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    roupa VARCHAR(100),
+    condicao VARCHAR(100),
+    tipo VARCHAR(100),
+    tamanho VARCHAR(5),
+    cor VARCHAR(20),
+    valor float
+);
+
+-- ***CRUD***
+
+-- exemplo de insert na tabela usuario
+INSERT INTO usuario (nome, senha, username, email, telefone, endereco, pais, estado) VALUES 
+('Fulano de Tal', '123456', 'fulano', 'fulano@email.com', '123456789', 'Rua da Paz, 123', 'Brasil', 'São Paulo'),
+('Beltrano de Tal', '654321', 'beltrano', 'beltrano@email.com', '987654321', 'Rua da Estrela, 456', 'Portugal', 'Lisboa'),
+('Ciclano de Tal', '135790', 'ciclano', 'ciclano@email.com', '234567891', 'Rua da Lua, 789', 'EUA', 'Nova York');
+
+-- exemplo de insert na tabela roupa
+INSERT INTO roupa (roupa, condicao, tipo, tamanho, cor, valor) VALUES
+('Camiseta Casual Masculina', 'Nova', 'camiseta', 'M', 'Azul', 29.99),
+('Vestido de Festa Feminino', 'Usado', 'blusa', 'P', 'Vermelho', 99.99),
+('Calça Jeans Skinny', 'Nova', 'camisa', '38', 'Azul Escuro', 49.99),
+('Tênis Esportivo Feminino', 'Usado', 'tenis', '37', 'Branco', 59.99),
+('Blusa de Malha Masculina', 'Nova', 'blusa', 'G', 'Cinza', 34.99),
+('Shorts Jeans Feminino', 'Usado', 'shorts', '36', 'Azul Claro', 24.99),
+('Sapato Social Masculino', 'Novo', 'sapato', '42', 'Preto', 69.99),
+('Jaqueta de Couro Feminina', 'Nova', 'blusa', 'M', 'Marrom', 79.99),
+('Saia Midi Plissada', 'Nova', 'shorts', 'P', 'Verde', 29.99),
+('Moletom Unissex', 'Novo', 'camiseta', 'G', 'Cinza', 44.99),
+('Camisa Polo Masculina', 'Usada', 'camisa', 'M', 'Branca', 39.99),
+('Legging Fitness Feminina', 'Nova', 'blusa', 'P', 'Rosa', 34.99),
+('Jaqueta Corta-Vento Unissex', 'Usada', 'blusa', 'G', 'Preto', 59.99),
+('Macacão Longo Feminino', 'Novo', 'shorts', 'M', 'Azul Marinho', 89.99),
+('Sapato Casual Feminino', 'Novo', 'sapato', '38', 'Bege', 54.99),
+('Camiseta Estampada Masculina', 'Nova', 'camiseta', 'L', 'Estampada', 29.99),
+('Calça de Moletom Unissex', 'Usada', 'camisa', 'M', 'Cinza', 24.99),
+('Vestido Floral Midi', 'Novo', 'blusa', 'G', 'Floral', 59.99),
+('Blazer Feminino', 'Usado', 'blusa', 'P', 'Preto', 74.99),
+('Camisola de Seda Feminina', 'Nova', 'camiseta', 'M', 'Rosa Claro', 49.99);
+
+

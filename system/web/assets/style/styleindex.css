@@ -1,0 +1,23 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
+
+    @media screen and (max-width: 920px) {
+        .card{
+            backdrop-filter: blur(0px);
+        }
+        #imglogin {
+            display: none;
+        }
+        .centro{
+            padding-left:  26%
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .card{
+            backdrop-filter: blur(0px);
+        }
+        .centro{
+            padding-left:  20%
+        }
+ 
+    }
+    
