@@ -1,6 +1,7 @@
 
-# Trade&Style
-<img src="https://cdn.discordapp.com/attachments/460955986581127199/1178696620456558612/image_18.png?ex=657715c5&is=6564a0c5&hm=8d841d956337e269cf99c41b8dcf5406e067bb73cd973fc5ed0be2ea4775c9d8&" alt="Logo">
+# Trade&Style <img src="https://cdn.discordapp.com/attachments/460955986581127199/1178696620456558612/image_18.png?ex=657715c5&is=6564a0c5&hm=8d841d956337e269cf99c41b8dcf5406e067bb73cd973fc5ed0be2ea4775c9d8&" width="50px;" alt="Logo">
+
+<img src="https://media.discordapp.net/attachments/1141774731931025529/1181404162991337554/iPhone_12_Pro_Mockups.png?ex=6580ef5d&is=656e7a5d&hm=1cef7fcfbedc914f55d93ce375b3ef500d5f296be248807cd6072fde051549e6&=&format=webp&quality=lossless&width=852&height=640"  width="500px;" alt="Logo">
 
 ## Visão Geral:
 Em busca de melhorar e deixar mais sustentável a venda de roupas, decidimos criar a Trade & Style. Um sistema Web Mobile com o objetivo de ser um Wecommer inovador e tecnológico.
